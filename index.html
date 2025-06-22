@@ -3,24 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organize Sua Casa</title>
+    <title>Login - Organize Sua Casa</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Ícones -->
 </head>
 <body>
     <div class="login-container">
-        <img src="imagem-casa.jpg" alt="Casa Organizada" class="imagem-topo">
-        <h1>Organize Sua Casa,</h1>
-        <p class="subtitulo">Liberte Sua Mente</p>
-        <form onsubmit="fazerLogin(event)">
-            <input type="text" id="usuario" placeholder="Usuário" required>
-            <input type="password" id="senha" placeholder="Senha" required>
-            <button type="submit">Entrar</button>
-        </form>
+        <div class="login-box">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>Bem-vindo(a)!</h1>
+            <p class="subtitulo">Acesse sua conta para continuar</p>
+
+            <form onsubmit="fazerLogin(event)">
+                <input type="text" id="usuario" placeholder="E-mail ou Usuário" required>
+                <input type="password" id="senha" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+
+            <p class="aviso">Esqueceu sua senha? <a href="#">Recuperar senha</a></p>
+        </div>
     </div>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/5561981287605" class="whatsapp" target="_blank" title="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script>
         function fazerLogin(event) {
             event.preventDefault();
+
             const usuario = document.getElementById('usuario').value;
             const senha = document.getElementById('senha').value;
 
