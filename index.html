@@ -23,13 +23,13 @@
 
     <script>
         function fazerLogin(event) {
-            event.preventDefault(); // Evita o envio do formulário
+            event.preventDefault();
 
             const usuario = document.getElementById('usuario').value;
             const senha = document.getElementById('senha').value;
 
             if (usuario === 'admin' && senha === '1234') {
-                window.location.href = 'video.html'; // Redireciona
+                window.location.href = 'video.html';
             } else {
                 alert('Usuário ou senha incorretos!');
             }
