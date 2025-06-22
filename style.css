@@ -6,105 +6,142 @@
 }
 
 body {
-    background-color: #f3f4f6;
+    background-color: #121212;
+}
+
+.container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
 }
 
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.login-box {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
+.left {
+    flex: 1;
     position: relative;
 }
 
+.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 12px;
+}
+
+.right {
+    flex: 1;
+    background-color: #1f1f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background-color: #1f1f1f;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
 .logo {
-    width: 120px;
+    width: 70px;
     margin-bottom: 20px;
 }
 
-h1 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 8px;
+form {
+    text-align: left;
 }
 
-.subtitulo {
-    color: #666;
+label {
+    display: block;
+    color: #ccc;
+    margin-bottom: 5px;
     font-size: 14px;
-    margin-bottom: 30px;
 }
 
-input {
+input[type="text"],
+input[type="password"] {
     width: 100%;
-    padding: 14px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+    padding: 12px;
+    background-color: #121212;
+    border: none;
     border-radius: 8px;
+    margin-bottom: 15px;
+    color: white;
     font-size: 14px;
-    transition: border-color 0.3s;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #666;
 }
 
 input:focus {
-    border-color: #005eff;
-    outline: none;
+    outline: 2px solid #444;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember input {
+    margin-right: 8px;
+}
+
+.remember label {
+    color: #ccc;
+    font-size: 13px;
 }
 
 button {
     width: 100%;
-    padding: 14px;
-    background-color: #005eff;
-    color: white;
+    padding: 12px;
+    background-color: #333;
+    color: #888;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
     font-weight: bold;
 }
 
 button:hover {
-    background-color: #0041c4;
+    background-color: #555;
+    color: white;
 }
 
-.aviso {
+.forgot {
+    display: block;
     margin-top: 15px;
+    color: #999;
     font-size: 13px;
-    color: #666;
-}
-
-.aviso a {
-    color: #005eff;
     text-decoration: none;
+    text-align: center;
 }
 
-.aviso a:hover {
+.forgot:hover {
     text-decoration: underline;
 }
 
-/* Botão WhatsApp */
+/* WhatsApp Button */
 .whatsapp {
     position: fixed;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     bottom: 20px;
     right: 20px;
     background-color: #25d366;
     color: white;
-    border-radius: 50px;
+    border-radius: 50%;
     text-align: center;
     font-size: 30px;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
