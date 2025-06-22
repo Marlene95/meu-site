@@ -1,62 +1,121 @@
-body {
-    background-color: #0d1b2a;
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-.container {
-    width: 400px;
-    margin: 50px auto;
-    background-color: #1b263b;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    text-align: center;
+body {
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.container img {
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    border-radius: 10px;
 }
 
-h1 {
-    color: #fff;
-    margin: 15px 0 5px 0;
+.login-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
 }
 
-.subtitulo {
-    color: #a0c4ff;
+.logo {
+    width: 120px;
     margin-bottom: 20px;
 }
 
-.login-box input {
-    width: 90%;
-    padding: 12px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 16px;
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 8px;
 }
 
-.login-box button {
-    width: 92%;
-    padding: 12px;
-    background-color: #00b4d8;
+.subtitulo {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #005eff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #005eff;
     color: white;
     border: none;
     border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 16px;
+    transition: background-color 0.3s;
     font-weight: bold;
-    transition: background-color 0.3s ease;
 }
 
-.login-box button:hover {
-    background-color: #0077b6;
+button:hover {
+    background-color: #0041c4;
 }
 
-h2 {
+.aviso {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #666;
+}
+
+.aviso a {
+    color: #005eff;
+    text-decoration: none;
+}
+
+.aviso a:hover {
+    text-decoration: underline;
+}
+
+/* Botão WhatsApp */
+.whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
     color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
 }
