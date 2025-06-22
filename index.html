@@ -2,90 +2,77 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Organize Sua Casa, Liberte Sua Mente</title>
-  <style>
-    body {
-      background-color: #f0f0f0;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 30px;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    h2 {
-      color: #555;
-      margin-top: -10px;
-      margin-bottom: 20px;
-    }
-    img {
-      width: 300px;
-      border-radius: 15px;
-      margin-bottom: 20px;
-    }
-    form {
-      background-color: white;
-      display: inline-block;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-    input[type="text"],
-    input[type="password"] {
-      width: 200px;
-      padding: 8px;
-      margin: 5px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    input[type="submit"] {
-      padding: 10px 20px;
-      background-color: #27ae60;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    input[type="submit"]:hover {
-      background-color: #219150;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organize Sua Casa</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #7f8c8d;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #219150;
+        }
+        .image {
+            max-width: 300px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-
-  <h1>Organize Sua Casa, Liberte Sua Mente</h1>
-  <h2>Limpe Sua Mente</h2>
-
-  <img src="https://cdn.pixabay.com/photo/2016/10/13/09/06/living-room-1738300_960_720.jpg" alt="Casa Organizada">
-
-  <form onsubmit="return login()">
-    <div>
-      <label>Usuário:</label><br>
-      <input type="text" id="usuario" required><br>
+    <h1>Organize Sua Casa</h1>
+    <h2>Limpe Sua Mente</h2>
+    <img src="imagem-casa.avif" alt="Casa Organizada" class="image">
+    <div class="login-container">
+        <form action="video.html">
+            <div>
+                <label for="usuario">Usuário:</label><br>
+                <input type="text" id="usuario" name="usuario" required>
+            </div>
+            <div>
+                <label for="senha">Senha:</label><br>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
     </div>
-    <div>
-      <label>Senha:</label><br>
-      <input type="password" id="senha" required><br><br>
-    </div>
-    <input type="submit" value="Entrar">
-  </form>
-
-  <script>
-    function login() {
-      var usuario = document.getElementById('usuario').value;
-      var senha = document.getElementById('senha').value;
-
-      if (usuario === "admin" && senha === "1234") {
-        alert("Login bem-sucedido!");
-        window.location.href = "video.html";
-        return false;
-      } else {
-        alert("Usuário ou senha incorretos!");
-        return false;
-      }
-    }
-  </script>
-
 </body>
 </html>
