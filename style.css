@@ -1,68 +1,70 @@
 body {
-    background-color: #0f1b2d;
+    background-color: #000;
     margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+}
+
+.container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
-}
-
-.login-container {
-    background-color: #142c44;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
     text-align: center;
-    width: 350px;
-}
-
-.imagem-topo {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
 }
 
 h1 {
-    color: #fff;
-    margin: 0;
-    font-size: 24px;
+    color: white;
+    margin-bottom: 5px;
 }
 
-.subtitulo {
-    color: #b0c4de;
-    margin: 4px 0 20px 0;
-    font-size: 14px;
+h3 {
+    color: white;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-weight: 400;
 }
 
-input {
+.imagem {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.login-box {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.login-box h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    display: block;
     width: 100%;
-    padding: 12px;
-    margin: 8px 0;
+    padding: 10px;
+    margin-bottom: 15px;
     border: none;
-    border-radius: 8px;
-    background-color: #fff;
-    font-size: 14px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
 }
 
-input:focus {
-    outline: none;
-    background-color: #e6f0ff;
-}
-
-button {
+.login-box button {
     width: 100%;
-    padding: 12px;
-    background-color: #00bfff;
-    color: #fff;
+    padding: 10px;
+    background-color: #007bff;
     border: none;
-    border-radius: 8px;
-    font-weight: bold;
+    border-radius: 5px;
+    color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #009acd;
+.login-box button:hover {
+    background-color: #0056b3;
 }
