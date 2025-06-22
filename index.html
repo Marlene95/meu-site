@@ -3,47 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Leandro Nunes</title>
+    <title>Login - Organize Sua Casa</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="left">
-            <img src="bg.jpg" alt="Imagem de Fundo">
-            <p class="footer">Copyright © 2025 - Leandro Nunes <br>Todos os direitos reservados.</p>
-        </div>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>Bem-vindo de volta!</h1>
+            <p class="subtitulo">Acesse sua conta para continuar</p>
 
-        <div class="right">
-            <div class="login-box">
-                <img src="logo.png" class="logo" alt="Logo">
-                <form onsubmit="fazerLogin(event)">
-                    <label for="usuario">E-mail</label>
-                    <input type="text" id="usuario" placeholder="Digite seu e-mail" required>
+            <form onsubmit="fazerLogin(event)">
+                <input type="text" id="usuario" placeholder="E-mail ou Usuário" required>
+                <input type="password" id="senha" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
 
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" placeholder="Digite sua senha" required>
-
-                    <div class="remember">
-                        <input type="checkbox" id="lembrar">
-                        <label for="lembrar">Lembrar de mim</label>
-                    </div>
-
-                    <button type="submit">Entrar</button>
-                </form>
-                <a href="#" class="forgot">Esqueceu sua senha?</a>
-            </div>
+            <p class="aviso">Esqueceu sua senha? <a href="#">Clique aqui</a></p>
         </div>
     </div>
-
-    <!-- WhatsApp -->
-    <a href="https://wa.me/5561981287605" class="whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
 
     <script>
         function fazerLogin(event) {
             event.preventDefault();
+
             const usuario = document.getElementById('usuario').value;
             const senha = document.getElementById('senha').value;
 
