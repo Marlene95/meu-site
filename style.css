@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -9,46 +8,61 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    flex-direction: column;
 }
 
-.login-container {
-    background-color: #111;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #333;
+.container {
     text-align: center;
 }
 
-.login-container h1 {
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-weight: normal;
+    margin-top: 5px;
     margin-bottom: 20px;
 }
 
-.login-container img {
+.imagem {
     width: 250px;
     margin-bottom: 20px;
-    border-radius: 8px;
 }
 
-input {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
+.login-box {
+    background-color: #111;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.login-box h3 {
+    margin: 0 0 15px 0;
+}
+
+.login-box input {
     padding: 10px;
+    width: 250px;
     border: none;
     border-radius: 5px;
 }
 
-button {
-    width: 100%;
+.login-box button {
     padding: 10px;
+    width: 260px;
     background-color: #007bff;
     border: none;
-    color: white;
     border-radius: 5px;
+    color: white;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-button:hover {
+.login-box button:hover {
     background-color: #0056b3;
 }
